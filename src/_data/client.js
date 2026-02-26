@@ -1,6 +1,6 @@
 module.exports = {
-    name: "SR22 Serve",
-    email: "info@sr22serve.com",
+    name: "SR22 Serve Ohio",
+    email: "info@sr22serveohio.com",
     phoneForTel: "857-201-2994",
     phoneFormatted: "(857) 201-2994",
     address: {
@@ -17,7 +17,7 @@ module.exports = {
         instagram: "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    domain: "https://www.sr22serve.com",
+    domain: "https://www.sr22serveohio.com",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };

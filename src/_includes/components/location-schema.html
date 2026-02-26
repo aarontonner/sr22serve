@@ -2,109 +2,156 @@
   {
     "@context": "https://schema.org/",
     "@type": "Service",
-    "serviceType": "Roofing Contractor",
+    "serviceType": "SR22 Insurance Services",
     "provider": {
       "@type": "Organization",
-      "name": "RoofingServe",
+      "name": "{{ client.name }}",
       "url": "{{ client.domain }}",
       "telephone": "{{ client.phoneFormatted }}"
     },
     "areaServed": {
       "@type": "City",
-      "name": "{{ location }}",
+      "name": [
+        "Cincinnati",
+        "Columbus",
+        "Cleveland",
+        "Akron",
+        "Dayton",
+        "Toledo"
+      ],
       "containedInPlace": {
         "@type": "State",
-        "name": "{{ state }}"
+        "name": "Ohio"
       }
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Roofing Services",
+      "name": "Cheap SR22 Insurance Ohio",
       "itemListElement": [
         {
           "@type": "OfferCatalog",
-          "name": "Roof Repair Services",
+          "name": "Standard Ohio SR22 Insurance",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Emergency Roof Leak Repair"
+                "name": "Ohio SR22 Insurance Filing"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Storm Damage Roof Repair"
+                "name": "Ohio SR22 Insurance Compliance"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Shingle Replacement"
+                "name": "Ohio SR22 Insurance Requirements"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Flashing Repair"
+                "name": "Ohio SR22 Insurance Same-Day Filing"
               }
             }
           ]
         },
         {
           "@type": "OfferCatalog",
-          "name": "Roof Replacement Services",
+          "name": "Non owner SR22 Insurance Ohio",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Complete Roof Replacement"
+                "name": "Non owner SR22 insurance filing"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Asphalt Shingle Installation"
+                "name": "non owner SR22 insurance compliance"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Metal Roof Installation"
+                "name": "non owner SR22 insurance same-day filing"
               }
             }
           ]
         },
         {
           "@type": "OfferCatalog",
-          "name": "Specialty Roofing Services",
+          "name": "Ohio SR22 Insurance Bond",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Roof Inspection"
+                "name": "Ohio SR22 insurance bond filing"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Out-of-state SR22 Insurance Ohio",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Out-of-state SR22 insurance filing"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Insurance Claim Assistance"
+                "name": "Out-of-state SR22 insurance compliance"
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Preventative Roof Maintenance"
+                "name": "Out-of-state SR22 insurance same-day filing"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "No vehicle SR22 insurance Ohio",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "No vehicle SR22 insurance filing"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "No vehicle SR22 insurance compliance"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "No vehicle SR22 insurance instant filing"
               }
             }
           ]
