@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SR22 Serve",
+    "url": "{{ client.domain }}",
+    "description": "SR22 insurance Ohio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ client.address.line1 }}",
+      "addressLocality": "{{ client.address.city }}",
+      "addressRegion": "{{ client.address.state }}",
+      "postalCode": "{{ client.address.zip }}"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": ["Ohio"]
+    },
+    "telephone": "{{ client.phoneFormatted }}",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "{{ client.phoneFormatted }}",
+      "contactType": "customer service"
+    }
+  }
+</script>

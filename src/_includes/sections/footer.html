@@ -1,0 +1,207 @@
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-275">
+  <div class="cs-container">
+    <!-- Logo Group -->
+    <div class="cs-logo-group">
+      <a aria-label="go back to home" class="cs-logo" href="/">
+        <img
+          class="cs-logo-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="/assets/svgs/logo-light.svg"
+          alt="ohio sr22 near me"
+          width="240"
+          height="32"
+        />
+      </a>
+      <p class="cs-text">
+        SR22 Serve takes the guesswork out of Ohio SR22 insurance compliance by
+        matching drivers with vetted, state-approved insurance providers who
+        file fast, charge fairly, and know exactly what the Ohio BMV requires
+        from you. SR-22 stands for Safety Responsibility 22. We're here to help
+        you get back on the road safely.
+        <strong
+          >Important:
+          <a href="/legal-disclaimer" target="_blank"
+            >Legal Disclaimer</a
+          ></strong
+        >
+      </p>
+
+      <div class="cs-social">
+        <a
+          class="cs-social-link"
+          aria-label="visit ohio sr22 google profile"
+          href="{{ client.address.mapLink }}"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            class="cs-social-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/google.svg"
+            alt="ohio sr22 google"
+            width="11"
+            height="11"
+          />
+        </a>
+        <a
+          class="cs-social-link"
+          aria-label="visit ohio sr22 facebook profile"
+          href="{{ client.socials.facebook }}"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            class="cs-social-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/facebook.svg"
+            alt="ohio sr22 facebook"
+            width="6"
+            height="11"
+          />
+        </a>
+        <a
+          class="cs-social-link"
+          aria-label="visit ohio sr22 instagram profile"
+          href="{{ client.socials.instagram }}"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            class="cs-social-img"
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/instagram.svg"
+            alt="ohio sr22 instagram"
+            width="11"
+            height="11"
+          />
+        </a>
+      </div>
+      <br />
+      <br />
+      <a href="tel: {{ client.phoneForTel }}" class="cs-button-solid"
+        >Call Us: {{ client.phoneFormatted }}</a
+      >
+    </div>
+    <!-- Links -->
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">Sitemap</span>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/">Home</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/about/">About</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/blog/ohio-bmv-amnesty-program-for-sr22"
+          >Ohio BMV Amnesty Program</a
+        >
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/blog/">Blog</a>
+      </li>
+
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/contact/">Contact</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/sitemap.xml/">Sitemap</a>
+      </li>
+    </ul>
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">Locations</span>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/">Columbus, OH</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/">Cleveland, OH</a>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="/">Cincinnati, OH</a>
+      </li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="/">Dayton, OH</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="/">Toledo, OH</a></li>
+      <li class="cs-nav-li"><a class="cs-nav-link" href="/">Akron, OH</a></li>
+    </ul>
+    <ul class="cs-nav">
+      <li class="cs-nav-li">
+        <span class="cs-header">Ohio Resources</span>
+      </li>
+      <li class="cs-nav-li">
+        <a class="cs-nav-link" href="https://www.bmv.ohio.gov/" target="_blank"
+          >Ohio BMV</a
+        >
+      </li>
+      <li class="cs-nav-li">
+        <a
+          class="cs-nav-link"
+          href="https://insurance.ohio.gov/"
+          target="_blank"
+          >Ohio Department of Insurance</a
+        >
+      </li>
+
+      <li class="cs-nav-li">
+        <a
+          class="cs-nav-link"
+          href="https://www.transportation.ohio.gov/"
+          target="_blank"
+          >Ohio Department of Transportation</a
+        >
+      </li>
+      <li class="cs-nav-li">
+        <a
+          class="cs-nav-link"
+          href="https://statepatrol.ohio.gov/statistics/statspage3.asp"
+          target="_blank"
+          >Ohio Driver Statistics</a
+        >
+      </li>
+    </ul>
+    <!-- Contact Info -->
+    <!-- <ul class="cs-contact">
+      <li class="cs-nav-li">
+        <span class="cs-header">Contact</span>
+      </li>
+      <li class="cs-contact-li">
+        <a
+          class="cs-contact-link cs-address"
+          href="{{ client.address.mapLink }}"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ client.address.lineOne }}, <br />
+          {{ client.address.lineTwo }}, <br />
+          {{ client.address.city }}, {{ client.address.state }} {{
+          client.address.zip }}
+          Serving Ohio Drivers
+        </a>
+      </li>
+      <li class="cs-contact-li">
+        <a class="cs-contact-link" href="tel:{{ client.phoneForTel }}"
+          >{{ client.phoneFormatted }}</a
+        >
+      </li>
+      <li class="cs-contact-li">
+        <a class="cs-contact-link" href="mailto:{{ client.email }}"
+          >{{ client.email }}</a
+        >
+      </li>
+    </ul> -->
+  </div>
+</footer>

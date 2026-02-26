@@ -1,0 +1,181 @@
+---
+title: "Contact Us | SR22Serve"
+description: "The best way to contact SR22Serve."
+permalink: "/contact/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="stylesheet" href="/assets/css/projects.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/sr22-insurance-ohio.png" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/sr22-insurance-ohio.png" | resize({ width: 576, height: 640 }) | avif %}"/>
+
+<!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css" />
+    {% endif %}
+    {% include "components/home-schema.html" %}
+    {% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Contact Us</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/contact/" class="cs-link cs-active">Contact Us</a>
+            </div>
+            <br>
+            <a href="tel: {{ client.phoneForTel }}" class="cs-button-solid">Call Us: {{ client.phoneFormatted }}</a>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/cheap-ohio-sr22-insurance.png" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="contact sr22serve" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+            <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="RPsbs-313">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group map-1834">
+    <div class="cs-background">
+        <iframe loading="lazy" src="https://www.google.com/maps/d/u/0/embed?mid=1OMhaugkFvjrJdFGbQyCmD1dB-u4MwOM&ehbc=2E312F&noprof=1" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- <div class="cs-container">
+        <ul class="cs-card-group">
+            {% if collections.service | length == 0 %}
+            <p>More service coverage coming soon!</p>
+            {% else %}  {%- for service in collections.service | reverse -%}
+            <li class="cs-item">
+                <a href="{{ service.url }}" class="cs-li-link cs-drop-link"
+                  >{{ service.data.service }} &#8594;</a
+                >
+            </li>
+            {%- endfor -%}{% endif %}
+        </ul>
+    </div> -->
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <h2 class="cs-title">
+                    Contact SR22Serve
+                </h2>
+                <p class="cs-text">
+You won't find a "submit your information and we'll be in touch" form on this page. That's a deliberate choice, and it's one we made entirely in your interest.
+Contact forms are the wrong tool for an SR22 situation. When your license is suspended and reinstatement is on the line, you don't need to fill out a form and wonder when someone will respond, whether they'll understand Ohio's BMV requirements, or whether the person who eventually calls you back will actually be able to help. Every hour of uncertainty is another hour you're not driving legally. Here at <a href="/">SR22 Serve</a> eliminate that entirely.
+                </p>
+                <p class="cs-text"><strong>When you call SR22 Serve directly, here's what actually happens:
+You speak immediately with someone who understands Ohio's SR22 process — not a general customer service representative reading from a script, but a specialist who knows the difference between an OVI suspension and an ALS, understands what the Ohio BMV requires for your specific violation, and can identify the right coverage type for your situation within the first few minutes of conversation.</p>
+                <!-- <div class="cs-quote">
+                    <div class="cs-quote-text">
+                       Areas We Serve:
+                        <ul>
+                {% if collections.location | length == 0 %}
+                <p>Coming soon</p>
+              {% else %}  {%- for location in collections.location | reverse -%}
+              <li>
+                <a href="{{ location.url }}" class="cs-li-link cs-drop-link"
+                  >{{ location.data.location }}</a
+                >{%- endfor -%}{% endif %}</li>
+                        </ul>
+                    </div>
+                </div> -->
+                <a href="tel: {{ client.phoneForTel }}" class="cs-button-solid">{{ client.phoneFormatted }}</a>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ============================================ -->
+    <!--                   Reviews                    -->
+    <!-- ============================================ -->
+
+    <section id="reviews-67">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Reviews</span>
+                <h2 class="cs-title">
+                    Why Trust SR22 Serve
+                </h2>
+                <p class="cs-text">
+The true measure of our <a href="/">Ohio SR22 insurance company</a> quality isn't what we say about it ourselves—it's what drivers of Ohio say <a href="/about">about us</a> that count most.</p>
+            </div>
+            <ul class="cs-card-group">
+                <!-- Review 1 -->
+                <li class="cs-item">
+                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="customer review for Ohio SR22 insurance" width="80" height="80">
+                    <p class="cs-item-text">
+"After my DUI, I didn't even know where to start. My license was suspended and I needed to get back on the road for work — I couldn't afford to wait. I called Ohio SR22 Serve on a Tuesday morning and they had my SR22 filed with the Ohio BMV the same day. The person I spoke with walked me through exactly what my driving record meant for my coverage options, didn't make me feel judged, and found me a cheap Ohio SR22 rate I could actually manage. If you're dealing with a suspension in Ohio and feeling overwhelmed, just call these guys first."</p>
+                    <div class="cs-info">
+                        <div class="cs-flex-group">
+                            <span class="cs-name">Marcus T. from Columbus, OH</span>
+                            <span class="cs-desc"><a href="/">Instant Ohio SR22 Insurance</a></span>
+                        </div>
+                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
+                    </div>
+                </li>
+                <!-- Review 2 -->
+                <li class="cs-item">
+                    <img class="cs-item-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/profile.svg" alt="Ohio SR22 agent review" width="80" height="80">
+                    <p class="cs-item-text">
+"I was honestly dreading this whole process. I don't own a car and had no idea you could even get SR22 insurance in Ohio without one — I thought I was stuck. Ohio SR22 Serve explained the non-owner policy in plain English, got me a quote in minutes, and had everything submitted to the state the same day. Six months into my three-year requirement and my coverage has been seamless."</p>
+                    <div class="cs-info">
+                        <div class="cs-flex-group">
+                            <span class="cs-name">Danielle R. from Cincinnati, OH</span>
+                            <span class="cs-desc"><a href="/">Ohio SR22 Filing</a>
+</span>
+                        </div>
+                        <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/stars.svg" alt="stars" width="96" height="16">
+                    </div>
+                </li>
+            </ul>
+            <a href="tel: {{ client.phoneForTel }}" class="cs-button-solid">Call Now: {{ client.phoneFormatted }}</a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-697">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Ready to skip the waiting game?</h2>
+            <a href="tel: {{ client.phoneForTel }}" class="cs-button-solid">Call Now: {{ client.phoneFormatted }}</a>
+        </div>
+    </div>
+    <!--SVG Waves Background-->
+    <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="sr22 contact" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
+</section>
+
+{% include 'components/featured-posts-reg.html' %}
+{% endblock %}

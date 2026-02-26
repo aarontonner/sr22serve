@@ -1,0 +1,272 @@
+# Replace the "backend" object below with the snippet from DecapBridge. We need something here to get the CMS to work locally, but this alone won't work in production
+backend:
+  name: git-gateway
+
+# Keep this to allow you to edit the cms locally
+local_backend: true
+
+# change url to a link to the image you want to use, no file paths, must be a URL
+logo_url: https://codestitch.app/frontend/images/logo.png
+
+# Image folders
+media_folder: "src/assets/images/blog"
+public_folder: "/assets/images/blog"
+
+# Decap CMS Collections
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "URL Slug",
+          name: "url",
+          widget: "string",
+          hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
+        }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "location"
+    label: "Location"
+    folder: "src/content/location"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tags", name: "tags", widget: "list", default: ["location"] }
+      - {
+          label: "Location",
+          name: "location",
+          widget: "string",
+          hint: "City, ST",
+        }
+      - {
+          label: "State",
+          name: "state",
+          widget: "string",
+          hint: "Enter the state for the Schema.org",
+        }
+      - {
+          label: "Page Title",
+          name: "pageTitle",
+          widget: "string",
+          hint: "60 Characters max.",
+        }
+      - {
+          label: "H1 Title",
+          name: "h1Title",
+          widget: "string",
+          hint: "Main Keyword",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          hint: "Use main keyword in first 100 words. 140 Characters max.",
+        }
+      - { label: "H2-1", name: "h21", widget: "string", hint: "First H2" }
+      - {
+          label: "P-1",
+          name: "p1",
+          widget: "markdown",
+          hint: "First Paragraph",
+        }
+      - {
+          label: "Surrounding Areas",
+          name: "surroundingAreas",
+          widget: "markdown",
+          hint: "Good spot for internal links to surrounding areas + services",
+        }
+      - { label: "H2-2", name: "h22", widget: "string", hint: "Second H2" }
+      - {
+          label: "P-2",
+          name: "p2",
+          widget: "markdown",
+          hint: "Second Paragraph",
+        }
+      - { label: "H2-3", name: "h23", widget: "string", hint: "Third H2" }
+      - {
+          label: "P-3",
+          name: "p3",
+          widget: "markdown",
+          hint: "Third Paragraph",
+        }
+      - {
+          label: "H2-4",
+          name: "h24",
+          widget: "string",
+          hint: "Fourth H2 - Types",
+        }
+      - {
+          label: "P-4",
+          name: "p4",
+          widget: "markdown",
+          hint: "Fourth Paragraph",
+        }
+      - {
+          label: "H2-5",
+          name: "h25",
+          widget: "string",
+          hint: "Fifth H2 - Hyper Local Sections",
+        }
+      - {
+          label: "P-5",
+          name: "p5",
+          widget: "markdown",
+          hint: "Content for hyper-local (communities, neighbourhoods list, etc)",
+        }
+      - { label: "H2-6", name: "h26", widget: "string", hint: "Sixth H2 - FAQ" }
+      - { label: "FAQ-1", name: "faq1", widget: "string" }
+      - { label: "A-1", name: "a1", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq2", widget: "string" }
+      - { label: "A-1", name: "a2", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq3", widget: "string" }
+      - { label: "A-1", name: "a3", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq4", widget: "string" }
+      - { label: "A-1", name: "a4", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq5", widget: "string" }
+      - { label: "A-1", name: "a5", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq6", widget: "string" }
+      - { label: "A-1", name: "a6", widget: "markdown" }
+      - { label: "H2-7", name: "h27", widget: "string", hint: "H2 concluding" }
+      - {
+          label: "P-6",
+          name: "p6",
+          widget: "markdown",
+          hint: "Concluding. Use main keyword.",
+        }
+      - {
+          label: "P-7",
+          name: "p7",
+          widget: "markdown",
+          hint: "Use for internal links next to map",
+        }
+      - {
+          label: "URL Slug",
+          name: "url",
+          widget: "string",
+          hint: 'Specify where the page will be written to. Accessible from "residential/location"',
+        }
+      - { label: "Map URL", name: "mapUrl", widget: "string" }
+  - name: "service"
+    label: "Service"
+    folder: "src/content/service"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tags", name: "tags", widget: "list", default: ["service"] }
+      - {
+          label: "Service",
+          name: "service",
+          widget: "string",
+          hint: "Service title",
+        }
+      - {
+          label: "Page Title",
+          name: "pageTitle",
+          widget: "string",
+          hint: "60 Characters max.",
+        }
+      - {
+          label: "H1 Title",
+          name: "h1Title",
+          widget: "string",
+          hint: "Main Keyword",
+        }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "string",
+          hint: "Use main keyword in first 100 words. 140 Characters max.",
+        }
+      - { label: "H2-1", name: "h21", widget: "string", hint: "First H2" }
+      - {
+          label: "P-1",
+          name: "p1",
+          widget: "markdown",
+          hint: "First Paragraph",
+        }
+      - {
+          label: "Surrounding Areas",
+          name: "surroundingAreas",
+          widget: "markdown",
+          hint: "Good spot for internal links to surrounding areas + services",
+        }
+      - { label: "H2-2", name: "h22", widget: "string", hint: "Second H2" }
+      - {
+          label: "P-2",
+          name: "p2",
+          widget: "markdown",
+          hint: "Second Paragraph",
+        }
+      - { label: "H2-3", name: "h23", widget: "string", hint: "Third H2" }
+      - {
+          label: "P-3",
+          name: "p3",
+          widget: "markdown",
+          hint: "Third Paragraph",
+        }
+      - {
+          label: "H2-4",
+          name: "h24",
+          widget: "string",
+          hint: "Fourth H2 - Types",
+        }
+      - {
+          label: "P-4",
+          name: "p4",
+          widget: "markdown",
+          hint: "Fourth Paragraph",
+        }
+      - {
+          label: "H2-5",
+          name: "h25",
+          widget: "string",
+          hint: "Fifth H2 - Hyper Local Sections",
+        }
+      - {
+          label: "P-5",
+          name: "p5",
+          widget: "markdown",
+          hint: "Content for hyper-local (communities, neighbourhoods list, etc)",
+        }
+      - { label: "H2-6", name: "h26", widget: "string", hint: "Sixth H2 - FAQ" }
+      - { label: "FAQ-1", name: "faq1", widget: "string" }
+      - { label: "A-1", name: "a1", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq2", widget: "string" }
+      - { label: "A-1", name: "a2", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq3", widget: "string" }
+      - { label: "A-1", name: "a3", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq4", widget: "string" }
+      - { label: "A-1", name: "a4", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq5", widget: "string" }
+      - { label: "A-1", name: "a5", widget: "markdown" }
+      - { label: "FAQ-1", name: "faq6", widget: "string" }
+      - { label: "A-1", name: "a6", widget: "markdown" }
+      - { label: "H2-7", name: "h27", widget: "string", hint: "H2 concluding" }
+      - {
+          label: "P-6",
+          name: "p6",
+          widget: "markdown",
+          hint: "Concluding. Use main keyword.",
+        }
+      - {
+          label: "P-7",
+          name: "p7",
+          widget: "markdown",
+          hint: "Use for internal links next to map",
+        }
+      - {
+          label: "URL Slug",
+          name: "url",
+          widget: "string",
+          hint: 'Specify where the page will be written to. Accessible from "residential/location"',
+        }
+      - { label: "Map URL", name: "mapUrl", widget: "string" }

@@ -1,0 +1,44 @@
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-343">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">Ohio SR22 Resources</h2>
+    </div>
+
+    <ul class="cs-card-group">
+      {%- for post in collections.featured | reverse -%}
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            src="{% getUrl post.data.image | resize({ width: 120, height: 120 }) | jpeg %}"
+            alt="{{ post.data.title }}"
+            width="60"
+            height="60"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+        <a href="{{ post.url }}" class="cs-link"
+          ><h3 class="cs-h3">{{ post.data.title }}</h3></a
+        >
+        <p class="cs-item-text">
+          <span class="cs-author-name"
+            ><a href="/">{{ post.data.author }}</a> |
+            <a href="/about">About</a> | <a href="/blog">SR22 Resources</a> |
+            <a href="/contact">Contact</a></span
+          >
+          <span aria-hidden="true" class="cs-dot"></span>
+          <span class="cs-date">{{ post.date | postDate }}</span>
+        </p>
+        <p class="cs-item-text">{{ post.data.description }}</p>
+      </li>
+      {%- endfor -%}
+    </ul>
+    <a href="tel: {{ client.phoneForTel }}" class="cs-button-solid"
+      >Call Us: {{ client.phoneFormatted }}</a
+    >
+  </div>
+</section>

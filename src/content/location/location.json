@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/location.html",
+  "tags": "location",
+  "eleventyComputed": {
+    "title": "{{ pageTitle }}",
+    "description": "{{ description }}",
+    "preloadImg": "{{ image }}",
+    "permalink": "/residential/{{ url | slugify }}/index.html"
+  }
+}
